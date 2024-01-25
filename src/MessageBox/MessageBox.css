@@ -105,6 +105,49 @@
   visibility: visible;
 }
 
+.rce-mbox-resend {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background: #fff;
+    position: absolute;
+    /*display: none;*/
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px 0 rgba(164, 164, 164, 1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .rce-mbox-resend-left {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    left: -155px;
+  }
+
+  .rce-mbox-resend-right {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    right: -155px;
+  }
+
+  .rce-container-mbox:hover .rce-mbox-resend-left {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .rce-container-mbox:hover .rce-mbox-resend-right {
+    opacity: 1;
+    visibility: visible;
+  }
+
 .rce-container-mbox:hover .rce-mbox-reply-btn-left {
   opacity: 1;
   visibility: visible;

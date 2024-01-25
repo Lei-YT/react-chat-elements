@@ -115,8 +115,8 @@ function MessageListExample() {
         downButton={true}
         downButtonBadge={10}
         sendMessagePreview={true}
-        messageBoxStyles={{ backgroundColor: 'red' }}
-        notchStyle={{ fill: 'red' }}
+        messageBoxStyles={{ backgroundColor: '#ccd5ae' }}
+        notchStyle={{ fill: '#ccd5ae' }}
       />
 
       <div

@@ -83,6 +83,9 @@ const MessageList: FC<IMessageListProps> = ({
     if (props.onRemoveMessageClick instanceof Function) props.onRemoveMessageClick(item, index, event)
   }
 
+  const onReSendMessageClick: MessageListEvent = (item, index, event) => {
+    if (props.onReSendMessageClick instanceof Function) props.onReSendMessageClick(item, index, event)
+  }
   const onContextMenu: MessageListEvent = (item, index, event) => {
     if (props.onContextMenu instanceof Function) props.onContextMenu(item, index, event)
   }

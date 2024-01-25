@@ -163,7 +163,8 @@ export interface IMessage {
   forwarded: boolean
   replyButton: boolean
   removeButton: boolean
-  status: 'waiting' | 'sent' | 'received' | 'read'
+  resendButton: boolean
+  status: 'waiting' | 'sent' | 'received' | 'read' | 'failed'
   statusTitle?: string
   notch: boolean
   copiableDate?: boolean
@@ -529,6 +530,7 @@ export interface IMessageBoxProps {
   onForwardClick?: React.MouseEventHandler
   onReplyClick?: React.MouseEventHandler
   onRemoveMessageClick?: React.MouseEventHandler
+  onReSendMessageClick?: React.MouseEventHandler
   onTitleClick?: React.MouseEventHandler
   onReplyMessageClick?: React.MouseEventHandler
   onMeetingMessageClick?: React.MouseEventHandler
@@ -601,6 +603,7 @@ export interface IMessageListProps {
   onReplyMessageClick?: MessageListEvent
   onTitleClick?: MessageListEvent
   onRemoveMessageClick?: MessageListEvent
+  onReSendMessageClick?: MessageListEvent
   onMeetingMessageClick?: MessageListEvent
   onMeetingTitleClick?: React.MouseEventHandler
   onMeetingVideoLinkClick?: React.MouseEventHandler

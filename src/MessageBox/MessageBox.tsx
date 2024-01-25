@@ -15,8 +15,8 @@ import MeetingLink from '../MeetingLink/MeetingLink'
 import Avatar from '../Avatar/Avatar'
 
 import { RiShareForwardFill } from 'react-icons/ri'
-import { IoIosDoneAll } from 'react-icons/io'
-import { MdAccessTime, MdCheck, MdMessage, MdDelete, MdBlock, MdDoneAll } from 'react-icons/md'
+import { IoIosDoneAll, IoMdCloseCircle  } from 'react-icons/io'
+import { MdAccessTime, MdCheck, MdMessage, MdDelete, MdBlock, MdDoneAll, MdRefresh,  } from 'react-icons/md'
 
 import { format } from 'timeago.js'
 
@@ -117,6 +117,27 @@ const MessageBox: React.FC<MessageBoxType> = ({ focus = false, notch = true, sty
               </div>
             )}
 
+            {!props.retracted && props.resendButton === true && (
+              <div
+                className={
+                  props.forwarded === true
+                    ? classNames(
+                        'rce-mbox-resend',
+                        { 'rce-mbox-resend-right': props.position === 'left' },
+                        { 'rce-mbox-resend-left': props.position === 'right' }
+                      )
+                    : classNames(
+                        'rce-mbox-forward',
+                        { 'rce-mbox-resend-btn-right': props.position === 'left' },
+                        { 'rce-mbox-resend-btn-left': props.position === 'right' }
+                      )
+                }
+                onClick={props.onReSendMessageClick}
+              >
+                <MdRefresh  />
+              </div>
+            )}
+
             {(props.title || props.avatar) && (
               <div
                 style={{ ...(props.titleColor && { color: props.titleColor }) }}
@@ -181,6 +202,8 @@ const MessageBox: React.FC<MessageBoxType> = ({ focus = false, notch = true, sty
                   {props.status === 'received' && <IoIosDoneAll />}
 
                   {props.status === 'read' && <MdDoneAll color='#4FC3F7' />}
+
+                  {props.status === 'failed' && (<IoMdCloseCircle color='#B21016' />)}
                 </span>
               )}
             </div>
