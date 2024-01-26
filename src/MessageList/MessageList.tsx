@@ -155,6 +155,9 @@ const MessageList: FC<IMessageListProps> = ({
             onRemoveMessageClick={
               props.onRemoveMessageClick && ((e: React.MouseEvent<HTMLElement>) => onRemoveMessageClick(x, i, e))
             }
+            onReSendMessageClick={
+              props.onReSendMessageClick && ((e: React.MouseEvent<HTMLElement>) => onReSendMessageClick(x, i, e))
+            }
             onClick={props.onClick && ((e: React.MouseEvent<HTMLElement>) => onClick(x, i, e))}
             onContextMenu={props.onContextMenu && ((e: React.MouseEvent<HTMLElement>) => onContextMenu(x, i, e))}
             onMeetingMoreSelect={
