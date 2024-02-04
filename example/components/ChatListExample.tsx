@@ -77,6 +77,7 @@ function ChatListExample() {
         showMute: Math.floor((Math.random() * 10) % 2) === 1,
         showVideoCall: Math.floor((Math.random() * 10) % 2) === 1,
         customStatusComponents: [Test],
+        showClose: true,
       },
     ])
   }, [chatListAray])
@@ -90,6 +91,7 @@ function ChatListExample() {
               dataSource={chatListAray}
               onClickMute={({ ...props }) => console.log(props)}
               onClickVideoCall={({ ...props }) => console.log(props)}
+              onClickClose={({ ...props }) => console.log(props)}
               id={''}
               lazyLoadingImage={''}
               onDragEnter={(e: React.DragEventHandler, id: number) => console.log(e, id, 'onDragEnter')}

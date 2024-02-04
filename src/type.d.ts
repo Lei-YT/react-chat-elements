@@ -48,11 +48,13 @@ export interface IChatItemProps {
   muted?: boolean
   showMute?: boolean
   showVideoCall?: boolean
+  showClose?: boolean
   onAvatarError?: React.MouseEventHandler
   onContextMenu?: React.MouseEventHandler
   onClick?: React.MouseEventHandler
   onClickMute?: React.MouseEventHandler
   onClickVideoCall?: React.MouseEventHandler
+  onClickClose?: React.MouseEventHandler
   onDragOver?: Function
   onDragEnter?: Function
   onDrop?: Function
@@ -102,6 +104,7 @@ export interface IChatListProps {
   onClick?: ChatListEvent
   onClickMute?: ChatListEvent
   onClickVideoCall?: ChatListEvent
+  onClickClose?: ChatListEvent
   onDragOver?: Function
   onDragEnter?: Function
   onDrop?: Function

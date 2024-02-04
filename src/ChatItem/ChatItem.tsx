@@ -8,6 +8,7 @@ import { format } from 'timeago.js'
 import classNames from 'classnames'
 
 import { MdVideoCall, MdVolumeOff, MdVolumeUp } from 'react-icons/md'
+import { IoMdCloseCircle } from "react-icons/io";
 import { IChatItemProps } from '../type'
 
 const ChatItem: React.FC<IChatItemProps> = ({
@@ -128,6 +129,11 @@ const ChatItem: React.FC<IChatItemProps> = ({
                 {props.showVideoCall && (
                   <div className='rce-citem-body--bottom-tools-item' onClick={props.onClickVideoCall}>
                     <MdVideoCall />
+                  </div>
+                )}
+                {props.showClose && (
+                  <div className='rce-citem-body--bottom-tools-item' onClick={props.onClickClose}>
+                    <IoMdCloseCircle />
                   </div>
                 )}
               </div>

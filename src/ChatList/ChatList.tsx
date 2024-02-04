@@ -42,6 +42,7 @@ const ChatList: React.FC<IChatListProps> = props => {
           onClick={(e: React.MouseEvent<HTMLElement>) => onClick(x, i, e)}
           onClickMute={(e: React.MouseEvent<HTMLElement>) => props.onClickMute?.(x, i, e)}
           onClickVideoCall={(e: React.MouseEvent<HTMLElement>) => props.onClickVideoCall?.(x, i, e)}
+          onClickClose={(e: React.MouseEvent<HTMLElement>) => props.onClickClose?.(x, i, e)}
           onDragOver={props?.onDragOver}
           onDragEnter={props?.onDragEnter}
           onDrop={props.onDrop}
